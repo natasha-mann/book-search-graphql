@@ -1,3 +1,5 @@
+const { User } = require("../models");
+
 const saveBook = (_, { input }, context) => {
   try {
     if (context.user) {
