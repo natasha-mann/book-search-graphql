@@ -1,3 +1,5 @@
+const { User } = require("../models");
+
 const getSingleUser = async (_, args, context) => {
   const foundUser = await User.findOne({ _id: context.user._id });
 
