@@ -6,8 +6,8 @@ const typeDefs = gql`
     authors: [String!]
     description: String!
     title: String!
-    image: String!
-    link: String!
+    image: String
+    link: String
   }
 
   type User {
