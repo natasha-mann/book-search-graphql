@@ -1,6 +1,6 @@
 const { User } = require("../models");
 
-const saveBook = (_, { input }, context) => {
+const saveBook = async (_, { input }, context) => {
   try {
     if (context.user) {
       const { bookId, authors, title, description, image } = input;

@@ -1,6 +1,6 @@
 const { User } = require("../models");
 
-const removeBook = (_, { input }, context) => {
+const removeBook = async (_, { input }, context) => {
   if (context.user) {
     const { bookId } = input;
 

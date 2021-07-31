@@ -1,4 +1,4 @@
-const getSingleUser = (_, args, context) => {
+const getSingleUser = async (_, args, context) => {
   const foundUser = await User.findOne({ _id: context.user._id });
 
   if (!foundUser) {
