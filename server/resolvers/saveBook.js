@@ -5,12 +5,11 @@ const { User } = require("../models");
 const saveBook = async (_, { input }, context) => {
   try {
     if (context.user) {
-      const { bookId, authors, title, description, image } = input;
-      const updatedUser = await User.findOneAndUpdate(
+      const updatedUser = await User.findByIdAndUpdate(
         { _id: context.user.id },
         {
-          $addToSet: {
-            savedBooks: { bookId, authors, title, description, image },
+          $push: {
+            savedBooks: input,
           },
         },
         { new: true }
