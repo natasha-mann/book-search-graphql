@@ -4,6 +4,7 @@ const { ApolloServer } = require("apollo-server-express");
 
 const typeDefs = require("./schemas");
 const resolvers = require("./resolvers");
+const context = require("./context");
 
 const db = require("./config/connection");
 
@@ -13,6 +14,7 @@ const app = express();
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  context,
 });
 
 const startServer = async () => {
