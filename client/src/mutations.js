@@ -13,7 +13,18 @@ export const LOGIN = gql`
   }
 `;
 
-// export const ADD_USER = gql``;
+export const ADD_USER = gql`
+  mutation Mutation($addUserInput: AddUserInput!) {
+    addUser(input: $addUserInput) {
+      token
+      user {
+        _id
+        username
+        email
+      }
+    }
+  }
+`;
 
 // export const SAVE_BOOK = gql``;
 
