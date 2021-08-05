@@ -2,7 +2,6 @@ const { User } = require("../models");
 
 const removeBook = async (_, { bookId }, context) => {
   if (context.user) {
-    console.log(context.user);
     const updatedUser = await User.findOneAndUpdate(
       { _id: context.user.id },
       { $pull: { savedBooks: { bookId } } },
