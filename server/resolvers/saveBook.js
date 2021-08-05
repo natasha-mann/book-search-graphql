@@ -14,7 +14,7 @@ const saveBook = async (_, { input }, context) => {
         },
         { new: true }
       );
-      console.log(updatedUser);
+
       return updatedUser;
     } else {
       throw new AuthenticationError("Not authorised");
