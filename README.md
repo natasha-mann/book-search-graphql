@@ -44,5 +44,5 @@ If you have any questions about this application, please contact me by [email](m
 
 ## Screenshots
 
-![img](./images/screenshot.png)
-![img](./images/screenshot2.png)
+![img](./screenshot.png)
+![img](./screenshot2.png)
